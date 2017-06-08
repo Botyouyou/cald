@@ -33,6 +33,9 @@
 			"module": "cald",
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"repository": "https://github.com/volkovasystems/cald.git",
 			"test": "cald-test.js",
 			"global": true
