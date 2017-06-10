@@ -1,8 +1,43 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script
-			type="application/javascript"
-			src="./cald.deploy.js">
-		</script>
-	</head>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Cald QUnit test</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+	<script type="application/javascript" src="./cald.deploy.js"></script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script>
+		QUnit.test( "equal test", function( assert ) {
+
+			assert.deepEqual( cald( function hello( value ){
+					return [ "hey", value, this ];
+				}, { "hello": "world" }, "yeah" ),
+				[ "hey", "yeah", { "hello": "world" } ], "should be deeply equal" );
+
+			assert.deepEqual( cald( function hello( value, data ){
+					return [ "hey", value, data, this ];
+				}, { "hello": "world" }, "yeah", 123 ),
+				[ "hey", "yeah", 123, { "hello": "world" } ], "should be deeply equal" );
+
+			assert.deepEqual( cald( function test( parameter ){
+					return Array.from( arguments );
+				}, "test", [ "hello", [ "world" ], "yeah" ] ),
+				[ [ "hello", [ "world" ], "yeah" ] ], "should be deeply equal" );
+
+			assert.deepEqual( cald( function test( parameter ){
+				return Array.from( arguments );
+				}, "test", [ "hello", "world", "yeah" ], "hey" ),
+				[ [ "hello", "world", "yeah" ], "hey" ], "should be deeply equal" );
+				
+		} );
+	</script>
+</body>
+
 </html>

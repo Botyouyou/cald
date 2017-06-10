@@ -1,6 +1,6 @@
 {
   "name": "cald",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple bind and call.",
   "main": "cald.js",
   "support": "cald.support.js",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
