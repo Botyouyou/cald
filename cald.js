@@ -34,7 +34,8 @@
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/cald.git",
 			"test": "cald-test.js",
@@ -53,7 +54,6 @@
 
 	@include:
 		{
-			"protype": "protype",
 			"shft": "shft",
 			"wichevr": "wichevr",
 			"zelf": "zelf"
@@ -61,7 +61,6 @@
 	@end-include
 */
 
-const protype = require( "protype" );
 const shft = require( "shft" );
 const wichevr = require( "wichevr" );
 const zelf = require( "zelf" );
@@ -79,7 +78,7 @@ const cald = function cald( method, context, parameter ){
 
 	method = wichevr( method, function procedure( ){ throw new Error( "no operation" ); } );
 
-	if( !protype( method, FUNCTION ) ){
+	if( typeof method != "function" ){
 		throw new Error( "invalid method" );
 	}
 
