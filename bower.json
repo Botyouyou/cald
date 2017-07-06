@@ -1,12 +1,13 @@
 {
   "name": "cald",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Simple bind and call.",
   "main": "cald.deploy.js",
   "support": "cald.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -24,9 +25,8 @@
     "tests"
   ],
   "dependencies": {
-    "protype": "^0.22.0",
-    "shft": "^0.2.0",
-    "wichevr": "^0.10.0",
+    "shft": "^0.3.0",
+    "wichevr": "^0.12.0",
     "zelf": "^0.12.0"
   }
 }
