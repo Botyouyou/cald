@@ -1,6 +1,6 @@
 {
 	"name": "cald",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"description": "Simple bind and call.",
 	"main": "cald.deploy.js",
 	"support": "cald.support.js",
@@ -27,6 +27,6 @@
 	"dependencies": {
 		"shft": "^0.5.0",
 		"wichevr": "^0.14.0",
-		"zelf": "^0.13.0"
+		"zelf": "^0.14.0"
 	}
 }

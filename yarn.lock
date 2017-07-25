@@ -2629,9 +2629,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-zelf@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/zelf/-/zelf-0.13.0.tgz#a642981bd3dd08653c61f4513a6f096c5fc1bb7d"
+zelf@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/zelf/-/zelf-0.14.0.tgz#e70aaf4f64d4b69958f557598ce7b16257e1b441"
   dependencies:
     asea "^0.16.0"
     babel-runtime "^6.23.0"
