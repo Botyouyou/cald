@@ -1,47 +1,52 @@
 {
-  "name": "cald",
-  "version": "0.4.0",
-  "description": "Simple bind and call.",
-  "main": "cald.js",
-  "support": "cald.support.js",
-  "deploy": "cald.deploy.js",
-  "browser": "cald.deploy.js",
-  "scripts": {
-    "build": "babel cald.js --out-file cald.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha cald-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/cald.git"
-  },
-  "keywords": [
-    "simple",
-    "bind",
-    "call",
-    "cald"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/cald/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/cald#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "shft": "^0.4.0",
-    "wichevr": "^0.13.0",
-    "zelf": "^0.12.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.1.0"
-  }
+	"name": "cald",
+	"version": "0.5.0",
+	"description": "Simple bind and call.",
+	"main": "cald.js",
+	"support": "cald.support.js",
+	"deploy": "cald.deploy.js",
+	"browser": "cald.deploy.js",
+	"scripts": {
+		"build": "babel cald.js --out-file cald.support.js --source-maps && webpack --progress --display-modules",
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"formal": "jesy apply '*.json'",
+		"pretest": "npm run clear && npm run build",
+		"test": "node cald-test.js",
+		"posttest": "npm run formal"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/cald.git"
+	},
+	"keywords": [
+		"simple",
+		"bind",
+		"call",
+		"cald"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/cald/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/cald#readme",
+	"dependencies": {
+		"babel-runtime": "^6.23.0",
+		"shft": "^0.5.0",
+		"wichevr": "^0.14.0",
+		"zelf": "^0.13.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.3.0"
+	}
 }
