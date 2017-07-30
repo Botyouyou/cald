@@ -1,6 +1,6 @@
 {
 	"name": "cald",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "Simple bind and call.",
 	"main": "cald.deploy.js",
 	"support": "cald.support.js",
