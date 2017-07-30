@@ -116,7 +116,7 @@ describe( "cald", ( ) => {
 
 } );
 
-// @end-server
+//: @end-server
 
 //: @client:
 
@@ -164,4 +164,4 @@ describe( "cald", ( ) => {
 
 } );
 
-// @end-client
+//: @end-client
