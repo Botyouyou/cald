@@ -1,0 +1,74 @@
+{
+	"stats": {
+		"suites": 2,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-07-30T05:44:20.785Z",
+		"end": "2017-07-30T05:44:20.791Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with method,context and parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with method,context and parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
+}

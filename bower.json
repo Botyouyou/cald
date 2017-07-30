@@ -1,32 +1,32 @@
 {
-  "name": "cald",
-  "version": "0.7.0",
-  "description": "Simple bind and call.",
-  "main": "cald.deploy.js",
-  "support": "cald.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "simple",
-    "bind",
-    "call",
-    "cald"
-  ],
-  "homepage": "https://github.com/volkovasystems/cald",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "shft": "^0.5.0",
-    "wichevr": "^0.14.0",
-    "zelf": "^0.14.0"
-  }
+	"name": "cald",
+	"version": "0.7.0",
+	"description": "Simple bind and call.",
+	"main": "cald.deploy.js",
+	"support": "cald.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"simple",
+		"bind",
+		"call",
+		"cald"
+	],
+	"homepage": "https://github.com/volkovasystems/cald",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"shft": "^0.5.0",
+		"wichevr": "^0.14.0",
+		"zelf": "^0.14.0"
+	}
 }
