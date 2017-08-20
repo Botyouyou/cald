@@ -23,10 +23,5 @@
 		"bower_components",
 		"test",
 		"tests"
-	],
-	"dependencies": {
-		"shft": "^0.5.0",
-		"wichevr": "^0.14.0",
-		"zelf": "^0.14.0"
-	}
+	]
 }
