@@ -74,7 +74,7 @@ const path = require( "path" );
 
 describe( "cald", ( ) => {
 
-	describe( "`cald with method,context and parameter`", ( ) => {
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`", ( ) => {
 
 		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
 
@@ -82,33 +82,6 @@ describe( "cald", ( ) => {
 				return [ "hey", value, this ];
 			}, { "hello": "world" }, "yeah" ),
 			[ "hey", "yeah", { "hello": "world" } ] );
-
-		} );
-
-		it( "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
-
-			assert.deepEqual( cald( function hello( value, data ){
-				return [ "hey", value, data, this ];
-			}, { "hello": "world" }, "yeah", 123 ),
-			[ "hey", "yeah", 123, { "hello": "world" } ] );
-
-		} );
-
-		it( "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
-
-			assert.deepEqual( cald( function test( parameter ){
-				return Array.from( arguments );
-			}, "test", [ "hello", [ "world" ], "yeah" ] ),
-			[ [ "hello", [ "world" ], "yeah" ] ] );
-
-		} );
-
-		it( "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
-
-			assert.deepEqual( cald( function test( parameter ){
-				return Array.from( arguments );
-				}, "test", [ "hello", "world", "yeah" ], "hey" ),
-			[ [ "hello", "world", "yeah" ], "hey" ] );
 
 		} );
 
@@ -120,48 +93,8 @@ describe( "cald", ( ) => {
 
 //: @client:
 
-describe( "cald", ( ) => {
-
-	describe( "`cald with method,context and parameter`", ( ) => {
-
-		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
-
-			assert.deepEqual( cald( function hello( value ){
-				return [ "hey", value, this ];
-			}, { "hello": "world" }, "yeah" ),
-			[ "hey", "yeah", { "hello": "world" } ] );
-
-		} );
-
-		it( "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
-
-			assert.deepEqual( cald( function hello( value, data ){
-				return [ "hey", value, data, this ];
-			}, { "hello": "world" }, "yeah", 123 ),
-			[ "hey", "yeah", 123, { "hello": "world" } ] );
-
-		} );
-
-		it( "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
-
-			assert.deepEqual( cald( function test( parameter ){
-				return Array.from( arguments );
-			}, "test", [ "hello", [ "world" ], "yeah" ] ),
-			[ [ "hello", [ "world" ], "yeah" ] ] );
-
-		} );
-
-		it( "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
-
-			assert.deepEqual( cald( function test( parameter ){
-				return Array.from( arguments );
-				}, "test", [ "hello", "world", "yeah" ], "hey" ),
-			[ [ "hello", "world", "yeah" ], "hey" ] );
-
-		} );
-
-	} );
-
-} );
-
 //: @end-client
+
+//: @bridge:
+
+//: @end-bridge
