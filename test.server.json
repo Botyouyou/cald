@@ -1,74 +1,74 @@
 {
-  "stats": {
-    "suites": 2,
-    "tests": 4,
-    "passes": 4,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-20T03:52:15.178Z",
-    "end": "2017-08-20T03:52:15.188Z",
-    "duration": 10
-  },
-  "tests": [
-    {
-      "title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
-      "fullTitle": "cald `cald with method,context and parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
-      "fullTitle": "cald `cald with method,context and parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', [ 'world' ], 'yeah' ] ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
-      "fullTitle": "cald `cald with method,context and parameter` should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-23T05:55:50.651Z",
+		"end": "2017-08-23T05:55:50.659Z",
+		"duration": 8
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters` should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"fullTitle": "cald `cald with function named test as method, string type context and array type parameter` should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"fullTitle": "cald `cald with function named test as method, string type context, array type and string type parameters` should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "cald `cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters` should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"fullTitle": "cald `cald with function named test as method, string type context and array type parameter` should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"fullTitle": "cald `cald with function named test as method, string type context, array type and string type parameters` should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

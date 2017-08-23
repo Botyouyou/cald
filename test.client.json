@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 0,
+		"passed": 4,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-07-30T05:45:47.366Z",
-	"end": "2017-07-30T05:46:20.099Z",
+	"start": "2017-08-23T05:55:51.813Z",
+	"end": "2017-08-23T05:56:32.028Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -24,5 +24,157 @@
 		"timeout": 10000,
 		"ui": "bdd"
 	},
-	"suites": []
+	"suites": [
+		{
+			"name": "cald",
+			"duration": 0,
+			"start": "2017-08-23T05:56:31.629Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "cald",
+			"duration": 220,
+			"start": "2017-08-23T05:56:31.630Z",
+			"end": "2017-08-23T05:56:31.850Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-23T05:56:31.631Z",
+					"end": "2017-08-23T05:56:31.631Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.722Z",
+					"end": "2017-08-23T05:56:31.723Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.724Z",
+					"end": "2017-08-23T05:56:31.724Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.769Z",
+					"end": "2017-08-23T05:56:31.769Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.769Z",
+					"end": "2017-08-23T05:56:31.769Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.808Z",
+					"end": "2017-08-23T05:56:31.808Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.809Z",
+					"end": "2017-08-23T05:56:31.809Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.849Z",
+					"end": "2017-08-23T05:56:31.850Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cald",
+					"associatedTest": "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]"
+				},
+				{
+					"start": "2017-08-23T05:56:31.850Z",
+					"end": "2017-08-23T05:56:31.850Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "cald"
+				}
+			]
+		},
+		{
+			"name": "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`",
+			"duration": 93,
+			"start": "2017-08-23T05:56:31.630Z",
+			"end": "2017-08-23T05:56:31.723Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+					"start": "2017-08-23T05:56:31.631Z",
+					"end": "2017-08-23T05:56:31.722Z",
+					"duration": 91,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters`",
+			"duration": 46,
+			"start": "2017-08-23T05:56:31.723Z",
+			"end": "2017-08-23T05:56:31.769Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+					"start": "2017-08-23T05:56:31.723Z",
+					"end": "2017-08-23T05:56:31.769Z",
+					"duration": 46,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`cald with function named test as method, string type context and array type parameter`",
+			"duration": 39,
+			"start": "2017-08-23T05:56:31.769Z",
+			"end": "2017-08-23T05:56:31.808Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]",
+					"start": "2017-08-23T05:56:31.769Z",
+					"end": "2017-08-23T05:56:31.808Z",
+					"duration": 39,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`cald with function named test as method, string type context, array type and string type parameters`",
+			"duration": 42,
+			"start": "2017-08-23T05:56:31.808Z",
+			"end": "2017-08-23T05:56:31.850Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]",
+					"start": "2017-08-23T05:56:31.809Z",
+					"end": "2017-08-23T05:56:31.849Z",
+					"duration": 40,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
 }

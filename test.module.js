@@ -75,7 +75,6 @@ const path = require( "path" );
 describe( "cald", ( ) => {
 
 	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`", ( ) => {
-
 		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
 
 			assert.deepEqual( cald( function hello( value ){
@@ -84,7 +83,40 @@ describe( "cald", ( ) => {
 			[ "hey", "yeah", { "hello": "world" } ] );
 
 		} );
+	} );
 
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( cald( function hello( value, data ){
+				return [ "hey", value, data, this ];
+			}, { "hello": "world" }, "yeah", 123 ),
+			[ "hey", "yeah", 123, { "hello": "world" } ] );
+
+		} );
+
+	} );
+
+	describe( "`cald with function named test as method, string type context and array type parameter`", ( ) => {
+		it( "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
+
+			assert.deepEqual( cald( function test( parameter ){
+				return Array.from( arguments );
+			}, "test", [ "hello", [ "world" ], "yeah" ] ),
+			[ [ "hello", [ "world" ], "yeah" ] ] );
+
+		} );
+	} );
+
+	describe( "`cald with function named test as method, string type context, array type and string type parameters`", ( ) => {
+		it( "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
+
+			assert.deepEqual( cald( function test( parameter ){
+				return Array.from( arguments );
+				}, "test", [ "hello", "world", "yeah" ], "hey" ),
+			[ [ "hello", "world", "yeah" ], "hey" ] );
+
+		} );
 	} );
 
 } );
@@ -93,8 +125,150 @@ describe( "cald", ( ) => {
 
 //: @client:
 
+describe( "cald", ( ) => {
+
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( cald( function hello( value ){
+				return [ "hey", value, this ];
+			}, { "hello": "world" }, "yeah" ),
+			[ "hey", "yeah", { "hello": "world" } ] );
+
+		} );
+	} );
+
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( cald( function hello( value, data ){
+				return [ "hey", value, data, this ];
+			}, { "hello": "world" }, "yeah", 123 ),
+			[ "hey", "yeah", 123, { "hello": "world" } ] );
+
+		} );
+
+	} );
+
+	describe( "`cald with function named test as method, string type context and array type parameter`", ( ) => {
+		it( "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
+
+			assert.deepEqual( cald( function test( parameter ){
+				return Array.from( arguments );
+			}, "test", [ "hello", [ "world" ], "yeah" ] ),
+			[ [ "hello", [ "world" ], "yeah" ] ] );
+
+		} );
+	} );
+
+	describe( "`cald with function named test as method, string type context, array type and string type parameters`", ( ) => {
+		it( "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
+
+			assert.deepEqual( cald( function test( parameter ){
+				return Array.from( arguments );
+				}, "test", [ "hello", "world", "yeah" ], "hey" ),
+			[ [ "hello", "world", "yeah" ], "hey" ] );
+
+		} );
+	} );
+
+} );
+
 //: @end-client
 
 //: @bridge:
+
+describe( "cald", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = cald( function hello( value ){
+						return [ "hey", value, this ];
+					}, { "hello": "world" }, "yeah" );
+
+					return JSON.stringify( test );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "hey", "yeah", { "hello": "world" } ] );
+
+		} );
+	} );
+
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = cald( function hello( value, data ){
+						return [ "hey", value, data, this ];
+					}, { "hello": "world" }, "yeah", 123 );
+
+					return JSON.stringify( test );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "hey", "yeah", 123, { "hello": "world" } ] );
+
+		} );
+
+	} );
+
+	describe( "`cald with function named test as method, string type context and array type parameter`", ( ) => {
+		it( "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = cald( function test( parameter ){
+						return Array.from( arguments );
+					}, "test", [ "hello", [ "world" ], "yeah" ] );
+
+					return JSON.stringify( test );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ [ "hello", [ "world" ], "yeah" ] ] );
+
+		} );
+	} );
+
+	describe( "`cald with function named test as method, string type context, array type and string type parameters`", ( ) => {
+		it( "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = cald( function test( parameter ){
+						return Array.from( arguments );
+					}, "test", [ "hello", "world", "yeah" ], "hey" );
+
+					return JSON.stringify( test );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ [ "hello", "world", "yeah" ], "hey" ] );
+
+		} );
+	} );
+
+} );
 
 //: @end-bridge

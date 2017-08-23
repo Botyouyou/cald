@@ -70,8 +70,7 @@ const cald = require( "./cald.js" );
 
 describe( "cald", ( ) => {
 
-	describe( "`cald with method,context and parameter`", ( ) => {
-
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and 'yeah' as parameter`", ( ) => {
 		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
 
 			assert.deepEqual( cald( function hello( value ){
@@ -80,8 +79,10 @@ describe( "cald", ( ) => {
 			[ "hey", "yeah", { "hello": "world" } ] );
 
 		} );
+	} );
 
-		it( "should return [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
+	describe( "`cald with function named hello as method, { 'hello': 'world' } as context and string type as well as number type parameters`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
 
 			assert.deepEqual( cald( function hello( value, data ){
 				return [ "hey", value, data, this ];
@@ -90,7 +91,10 @@ describe( "cald", ( ) => {
 
 		} );
 
-		it( "should return [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
+	} );
+
+	describe( "`cald with function named test as method, string type context and array type parameter`", ( ) => {
+		it( "should be equal to [ [ 'hello', [ 'world' ], 'yeah' ] ]", ( ) => {
 
 			assert.deepEqual( cald( function test( parameter ){
 				return Array.from( arguments );
@@ -98,8 +102,10 @@ describe( "cald", ( ) => {
 			[ [ "hello", [ "world" ], "yeah" ] ] );
 
 		} );
+	} );
 
-		it( "should return [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
+	describe( "`cald with function named test as method, string type context, array type and string type parameters`", ( ) => {
+		it( "should be equal to [ [ 'hello', 'world', 'yeah' ], 'hey' ]", ( ) => {
 
 			assert.deepEqual( cald( function test( parameter ){
 				return Array.from( arguments );
@@ -107,11 +113,12 @@ describe( "cald", ( ) => {
 			[ [ "hello", "world", "yeah" ], "hey" ] );
 
 		} );
-
 	} );
 
 } );
 
 //: @end-server
+
+
 
 
